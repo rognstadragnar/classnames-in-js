@@ -23,7 +23,7 @@ function getClassName(props, styledClassName) {
       ? styledClassName(props)
       : styledClassName
 
-  return [className, props.className].filter(Boolean).join('')
+  return [className, props.className].filter(Boolean).join(' ')
 }
 
 export { isPropValid, getClassName }
