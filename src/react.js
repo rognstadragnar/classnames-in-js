@@ -32,14 +32,12 @@ function createRender(tag, styledClassName) {
     }
 
     filteredProps.ref = ref
-    return (
-      <Theme.Consumer>
-        {theme => {
-          filteredProps.className = getClassName(props, styledClassName, theme)
-          return React.createElement(component, filteredProps)
-        }}
-      </Theme.Consumer>
-    )
+    return React.createElement(Theme.Consumer, {
+      children: theme => {
+        filteredProps.className = getClassName(props, styledClassName, theme)
+        return React.createElement(component, filteredProps)
+      }
+    })
   }
   return render
 }
