@@ -64,6 +64,8 @@ ReactDOM.render(<Heading active>Hello</Heading>, document.body)
 // <h1 class="heading-lkjfos heading--active-lkjfos">Hello</h1>
 ```
 
+#### Easily append classes
+
 ```js
 import React from 'react'
 import ReactDOM from 'react-dom'
@@ -77,6 +79,12 @@ ReactDOM.render(
 )
 
 // <h1 class="heading-class some-other-class">Hello</h1>
+```
+
+#### Yttug loves Preact
+
+```js
+import styled from 'yttug/preact'
 ```
 
 ## License
