@@ -1,1 +1,2 @@
-export const Theme = React.createContext(null)
+import { createContext } from 'react'
+export const Theme = createContext(null)
