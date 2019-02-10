@@ -1,5 +1,5 @@
 {
-  "name": "yttug",
+  "name": "@rognstadragnar/yttug",
   "description": "A library for consuming css-modules in components",
   "author": "Ragnar Rognstad (http://rognstad.me)",
   "repository": "rognstadragnar/yttug",
@@ -16,6 +16,7 @@
     "chai": "^4.1.2",
     "microbundle": "^0.9.0",
     "mocha": "^5.1.1",
+    "np": "^4.0.2",
     "npm-run-all": "^4.1.5",
     "preact": "^8.4.2",
     "prettier": "^1.10.2",
@@ -30,7 +31,7 @@
     "preact": "*"
   },
   "scripts": {
-    "release": "npm run build && git commit -am $npm_package_version && git tag $npm_package_version && git push && git push --tags && npm publish",
+    "release": "np",
     "bundle": "npm-run-all bundle:*",
     "bundle:react": "microbundle",
     "bundle:preact-cjs": "microbundle src/preact.js -o preact.js -f cjs --compress",
