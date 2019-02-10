@@ -51,6 +51,12 @@
   },
   "files": [
     "src",
-    "dist"
+    "dist",
+    "preact.js",
+    "preact.js.map",
+    "preact.esm.js",
+    "preact.esm.js.map",
+    "preact.umd.js",
+    "preact.umd.js.map"
   ]
 }
