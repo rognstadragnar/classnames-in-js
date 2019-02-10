@@ -1,13 +1,13 @@
 {
-  "name": "@rognstadragnar/yttug",
+  "name": "fasong",
   "description": "A library for consuming css-modules in components",
   "author": "Ragnar Rognstad (http://rognstad.me)",
-  "repository": "rognstadragnar/yttug",
+  "repository": "rognstadragnar/fasong",
   "license": "MIT",
   "version": "0.0.14-0",
   "source": "src/index.js",
-  "main": "dist/yttug.js",
-  "module": "dist/yttug.esm.js",
+  "main": "dist/fasong.js",
+  "module": "dist/fasong.esm.js",
   "devDependencies": {
     "@babel/core": "^7.2.2",
     "@babel/node": "^7.2.2",
