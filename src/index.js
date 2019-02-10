@@ -1,6 +1,6 @@
-import Yttug from './react'
+import tag from './tag'
 
-export default Yttug
+export default tag
 
 // type classNameFn<T>= (props: T) => string
 // type ClassName<T> = classNameFn<T> | string
