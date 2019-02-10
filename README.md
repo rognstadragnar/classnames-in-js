@@ -134,7 +134,7 @@ ReactDOM.render(
 
 `fasong` also supports using tagged template literals to construct classes.
 
-If a interpolated value is a function it will be called with the components `props` and the `theme` context if present.
+If an interpolated value is a function it will be called with the `props` and the `theme` if present.
 
 ```js
 import React from 'react'
