@@ -1,7 +1,6 @@
 import React from 'react'
 import { getClassName, isPropValid } from './lib/index'
-
-export const Theme = React.createContext(null)
+import { Theme } from './theme'
 
 export default function styled(tag, styledClassName) {
   const render = createRender(tag, styledClassName)

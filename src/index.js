@@ -1,5 +1,5 @@
 import styled from './tag'
-import { Theme } from './react'
+import { Theme } from './theme'
 
 export { styled, Theme }
 
