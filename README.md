@@ -1,15 +1,16 @@
-# WIP: Codename fasong
+# 💠 Fasong
 
-When you love the idea of `styled-components` and `CSS-in-JS`, but you also hate the idea of `styled-components` and `CSS-in-JS`.
+#### A more sane approach to CSS in React (and Preact)
 
-A library for working with CSS in React (or Preact) applications. Heavily inspired by how `styled-components` and `emotion` lets us write components, but without having to write CSS-in-JS.
+When you love the idea of `styled-components` and `CSS-in-JS`, but you also kind of hate it.
+
+Heavily inspired by how [styled-components](https://www.styled-components.com/) and [emotion](https://emotion.sh/) lets us write components, but without having to write CSS in JavaScript.
 
 ## Usage
 
 #### Installation
 
 ```sh
-# soon
 npm i fasong
 ```
 
