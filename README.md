@@ -87,6 +87,27 @@ ReactDOM.render(
 import styled from 'yttug/preact'
 ```
 
+## Todo/RFC
+
+```js
+import React from 'react'
+import ReactDOM from 'react-dom'
+import styled, { ThemeProvider } from 'yttug'
+
+const Heading = styled('h1', (props, theme) => `heading heading--${theme}`)
+
+const theme = 'sport'
+
+ReactDOM.render(
+  <ThemeProvider theme={theme}>
+    <Heading className="some-other-class">Hello</Heading>
+  </ThemeProvider>,
+  document.body
+)
+
+// <h1 class="heading heading--sport">Hello</h1>
+```
+
 ## License
 
 [MIT](LICENSE).
