@@ -1,6 +1,7 @@
-import tag from './tag'
+import styled from './tag'
+import { Theme } from './react'
 
-export default tag
+export { styled, Theme }
 
 // type classNameFn<T>= (props: T) => string
 // type ClassName<T> = classNameFn<T> | string
