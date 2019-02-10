@@ -1,7 +1,8 @@
 <p align="center" style="color: #343a40">
   <h1 align="center">Fasong</h1>
-  <h5 align="center">A more sane approach to CSS in React (and Preact)</h5>
 </p>
+
+### A more sane approach to CSS in React (and Preact)
 
 When you love the idea of `styled-components` and `CSS-in-JS`, but you also kind of hate it.
 
