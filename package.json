@@ -1,0 +1,51 @@
+{
+  "name": "yttug",
+  "description": "A library for consuming css-modules in components",
+  "author": "Ragnar Rognstad (http://rognstad.me)",
+  "repository": "rognstadragnar/yttug",
+  "license": "MIT",
+  "version": "0.0.1",
+  "source": "src/index.js",
+  "main": "dist/yttug.js",
+  "module": "dist/yttug.esm.js",
+  "browser": "dist/yttug.umd.js",
+  "devDependencies": {
+    "@types/chai": "^4.1.3",
+    "@types/mocha": "^5.2.0",
+    "@types/react": "^16.8.2",
+    "chai": "^4.1.2",
+    "microbundle": "^0.9.0",
+    "mocha": "^5.1.1",
+    "npm-run-all": "^4.1.5",
+    "preact": "^8.4.2",
+    "prettier": "^1.10.2",
+    "react": "^16.8.1",
+    "rimraf": "^2.6.2",
+    "ts-node": "^8.0.2",
+    "tslint": "^5.9.1",
+    "tslint-config-prettier": "^1.8.0"
+  },
+  "peerDependencies": {
+    "react": "*",
+    "preact": "*"
+  },
+  "scripts": {
+    "release": "npm run build && git commit -am $npm_package_version && git tag $npm_package_version && git push && git push --tags && npm publish",
+    "bundle": "npm-run-all bundle:*",
+    "bundle:react": "microbundle",
+    "bundle:preact-cjs": "microbundle src/preact.js -o preact.js -f cjs --compress",
+    "bundle:preact-es": "microbundle src/preact.js -o preact.js -f es --compress",
+    "bundle:preact-umd": "microbundle src/preact.js -o preact.js -f umd --compress",
+    "dev": "microbundle watch --compress false",
+    "prepare": "npm run build",
+    "build": "npm run clean && npm run bundle",
+    "clean": "npm-run-all clean:*",
+    "clean:react": "rimraf dist",
+    "clean:preact": "rimraf dist preact.js preact.js.map preact.esm.js preact.esm.js.map preact.umd.js preact.umd.js.map",
+    "test": "mocha -r ts-node/register __tests__/**/*.spec.ts"
+  },
+  "files": [
+    "src",
+    "dist"
+  ]
+}

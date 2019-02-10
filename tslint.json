@@ -1,0 +1,8 @@
+{
+    "extends": ["tslint:recommended", "tslint-config-prettier"],
+    "rules": {
+      "quotemark": [true, "single"],
+      "semicolon": [true, "never"],
+      "arrow-parens": [true, "ban-single-arg-parens"]
+    }
+}

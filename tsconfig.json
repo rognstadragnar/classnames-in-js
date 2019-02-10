@@ -1,0 +1,10 @@
+{
+  "compilerOptions": {
+    "declaration": false,
+    "target": "es5",
+    "baseUrl": ".",
+    "paths": {
+      "*": ["node_modules/*", "node_modules/@types/*"]
+    }
+  }
+}
