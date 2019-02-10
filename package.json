@@ -4,7 +4,7 @@
   "author": "Ragnar Rognstad (http://rognstad.me)",
   "repository": "rognstadragnar/yttug",
   "license": "MIT",
-  "version": "0.0.12-0",
+  "version": "0.0.13-0",
   "source": "src/index.js",
   "main": "dist/yttug.js",
   "module": "dist/yttug.esm.js",
