@@ -1,6 +1,8 @@
 import React from 'react'
 import { getClassName, isPropValid } from './lib/index'
 
+export const Theme = React.createContext(null)
+
 export default function styled(tag, styledClassName) {
   const render = createRender(tag, styledClassName)
   return React.forwardRef
@@ -13,7 +15,6 @@ export default function styled(tag, styledClassName) {
 function createRender(tag, styledClassName) {
   function render(props, ref) {
     const { as: component = tag, ...rest } = props
-
     let filteredProps
 
     // Check if it's an HTML tag and not a custom element
@@ -32,9 +33,14 @@ function createRender(tag, styledClassName) {
     }
 
     filteredProps.ref = ref
-    filteredProps.className = getClassName(props, styledClassName)
-
-    return React.createElement(component, filteredProps)
+    return (
+      <Theme.Consumer>
+        {theme => {
+          filteredProps.className = getClassName(props, styledClassName, theme)
+          return React.createElement(component, filteredProps)
+        }}
+      </Theme.Consumer>
+    )
   }
   return render
 }

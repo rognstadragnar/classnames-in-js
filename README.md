@@ -27,7 +27,7 @@ ReactDOM.render(<Heading>Hello</Heading>, document.body)
 // <h1 class="heading-class">Hello</h1>
 ```
 
-#### Yttug loves CSS modules
+#### Integrates with CSS modules
 
 ```js
 import React from 'react'
@@ -42,7 +42,7 @@ ReactDOM.render(<Heading>Hello</Heading>, document.body)
 // <h1 class="heading-lkjfos">Hello</h1>
 ```
 
-#### Yttug loves conditionally applying classes
+#### Conditionally applying classes
 
 ```js
 import React from 'react'
@@ -64,7 +64,7 @@ ReactDOM.render(<Heading active>Hello</Heading>, document.body)
 // <h1 class="heading-lkjfos heading--active-lkjfos">Hello</h1>
 ```
 
-#### Easily append classes
+#### Appending and overriding
 
 ```js
 import React from 'react'
@@ -81,32 +81,32 @@ ReactDOM.render(
 // <h1 class="heading-class some-other-class">Hello</h1>
 ```
 
-#### Yttug loves Preact
-
-```js
-import styled from 'yttug/preact'
-```
-
-## Todo/RFC
+#### Theming
 
 ```js
 import React from 'react'
 import ReactDOM from 'react-dom'
-import styled, { ThemeProvider } from 'yttug'
+import styled, { Theme } from 'yttug'
 
 const Heading = styled('h1', (props, theme) => `heading heading--${theme}`)
 
-const theme = 'sport'
-
 ReactDOM.render(
-  <ThemeProvider theme={theme}>
-    <Heading className="some-other-class">Hello</Heading>
-  </ThemeProvider>,
+  <Theme.Provider value={'sport'}>
+    <Heading>Hello</Heading>
+  </Theme.Provider>,
   document.body
 )
 
 // <h1 class="heading heading--sport">Hello</h1>
 ```
+
+#### Preact
+
+```js
+import styled from 'yttug/preact'
+```
+
+Note: `yttug/preact` does not currently support automaticly extracting theming from context. This is on the todo list.
 
 ## License
 
