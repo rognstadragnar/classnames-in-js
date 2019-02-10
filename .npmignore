@@ -4,3 +4,9 @@ node_modules
 .DS_Store
 !**/dist
 .rpt2_cache
+!preact.js
+!preact.js.map
+!preact.esm.js
+!preact.esm.js.map
+!preact.umd.js
+!preact.umd.js.map
