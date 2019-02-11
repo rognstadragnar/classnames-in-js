@@ -4,7 +4,7 @@
   "author": "Ragnar Rognstad (http://rognstad.me)",
   "repository": "rognstadragnar/classnames-in-js",
   "license": "MIT",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "source": "src/index.js",
   "main": "dist/classnames-in-js.js",
   "module": "dist/classnames-in-js.esm.js",
