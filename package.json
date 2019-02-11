@@ -1,13 +1,13 @@
 {
-  "name": "fasong",
+  "name": "classnames-in-js",
   "description": "A library for consuming css-modules in components",
   "author": "Ragnar Rognstad (http://rognstad.me)",
-  "repository": "rognstadragnar/fasong",
+  "repository": "rognstadragnar/classnames-in-js",
   "license": "MIT",
-  "version": "1.0.1",
+  "version": "0.1.0",
   "source": "src/index.js",
-  "main": "dist/fasong.js",
-  "module": "dist/fasong.esm.js",
+  "main": "dist/classnames-in-js.js",
+  "module": "dist/classnames-in-js.esm.js",
   "devDependencies": {
     "@babel/core": "^7.2.2",
     "@babel/node": "^7.2.2",
