@@ -1,7 +1,6 @@
 {
   "name": "classnames-in-js",
-  "description": "A library for consuming css-modules in components",
-  "author": "Ragnar Rognstad (http://rognstad.me)",
+  "author": "Ragnar Rognstad (https://rognstad.me)",
   "repository": "rognstadragnar/classnames-in-js",
   "license": "MIT",
   "version": "0.1.2",
