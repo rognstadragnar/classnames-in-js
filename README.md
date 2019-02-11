@@ -1,5 +1,5 @@
 <p align="center" style="color: #343a40">
-  <h1 align="center">Fasong</h1>
+  <h1 align="center">classnames-in-js</h1>
 </p>
 
 ### A more sane approach to CSS in React (and Preact)
@@ -13,7 +13,7 @@ Heavily inspired by how [styled-components](https://www.styled-components.com/) 
 #### Installation
 
 ```sh
-npm i fasong
+npm i classnames-in-js
 ```
 
 #### Basic usage
@@ -21,7 +21,7 @@ npm i fasong
 ```js
 import React from 'react'
 import ReactDOM from 'react-dom'
-import { styled } from 'fasong'
+import { styled } from 'classnames-in-js'
 
 const Heading = styled('h1', 'heading')
 
@@ -35,7 +35,7 @@ ReactDOM.render(<Heading>Hello</Heading>, document.body)
 ```js
 import React from 'react'
 import ReactDOM from 'react-dom'
-import { styled } from 'fasong'
+import { styled } from 'classnames-in-js'
 import styles from './styles.css'
 
 const Heading = styled('h1', styles.heading)
@@ -47,12 +47,12 @@ ReactDOM.render(<Heading>Hello</Heading>, document.body)
 
 #### Conditionally applying classes
 
-If `fasong` recieves a function as the second argument it will be called with the component props and/or [theme](#Theming).
+If `classnames-in-js` recieves a function as the second argument it will be called with the component props and/or [theme](#Theming).
 
 ```js
 import React from 'react'
 import ReactDOM from 'react-dom'
-import { styled } from 'fasong'
+import { styled } from 'classnames-in-js'
 import cx from 'classnames'
 
 import styles from './styles.css'
@@ -76,7 +76,7 @@ If a consumer passes a `className` prop it will be appended.
 ```js
 import React from 'react'
 import ReactDOM from 'react-dom'
-import { styled } from 'fasong'
+import { styled } from 'classnames-in-js'
 
 const Heading = styled('h1', 'heading')
 
@@ -91,7 +91,7 @@ ReactDOM.render(
 ```js
 import React from 'react'
 import ReactDOM from 'react-dom'
-import { styled } from 'fasong'
+import { styled } from 'classnames-in-js'
 
 const Heading = styled('h1', 'heading')
 const DarkHeading = styled(Heading, 'heading--dark')
@@ -116,7 +116,7 @@ ReactDOM.render(
 ```js
 import React from 'react'
 import ReactDOM from 'react-dom'
-import { styled, Theme } from 'fasong'
+import { styled, Theme } from 'classnames-in-js'
 
 const Heading = styled('h1', (props, theme) => `heading heading--${theme}`)
 
@@ -132,14 +132,14 @@ ReactDOM.render(
 
 #### Tagged template literal API
 
-`fasong` also supports using tagged template literals to construct classes.
+`classnames-in-js` also supports using tagged template literals to construct classes.
 
 If an interpolated value is a function it will be called with the `props` and the `theme` if present.
 
 ```js
 import React from 'react'
 import ReactDOM from 'react-dom'
-import { styled, Theme } from 'fasong'
+import { styled, Theme } from 'classnames-in-js'
 
 const Heading = styled.h1`
   heading
@@ -160,10 +160,10 @@ ReactDOM.render(
 #### Preact
 
 ```js
-import styled from 'fasong/preact'
+import styled from 'classnames-in-js/preact'
 ```
 
-**Note**: `fasong/preact` does not currently support automaticly extracting theming from context or the tagged template literal api. This is on the todo list.
+**Note**: `classnames-in-js/preact` does not currently support automaticly extracting theming from context or the tagged template literal api. This is on the todo list.
 
 ## License
 
