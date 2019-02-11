@@ -12,10 +12,9 @@
     "@babel/node": "^7.2.2",
     "@babel/preset-env": "^7.3.1",
     "@babel/register": "^7.0.0",
-    "@types/chai": "^4.1.3",
-    "@types/mocha": "^5.2.0",
-    "@types/react": "^16.8.2",
     "chai": "^4.1.2",
+    "eslint": "^5.13.0",
+    "eslint-config-prettier": "^4.0.0",
     "microbundle": "^0.9.0",
     "mocha": "^5.1.1",
     "np": "^4.0.2",
@@ -23,10 +22,7 @@
     "preact": "^8.4.2",
     "prettier": "^1.10.2",
     "react": "^16.8.1",
-    "rimraf": "^2.6.2",
-    "ts-node": "^8.0.2",
-    "tslint": "^5.9.1",
-    "tslint-config-prettier": "^1.8.0"
+    "rimraf": "^2.6.2"
   },
   "peerDependencies": {
     "react": "*",
@@ -39,12 +35,14 @@
     "bundle:preact-cjs": "microbundle src/preact.js -o preact.js -f cjs --compress",
     "bundle:preact-es": "microbundle src/preact.js -o preact.js -f es --compress",
     "dev": "microbundle watch --compress false",
+    "verify:lint": "eslint ./src",
+    "verify:test": "mocha -r @babel/register __tests__/**/*.spec.js",
+    "test": "npm run verify:lint && npm run verify:test",
     "prepare": "npm run build",
     "build": "npm run clean && npm run bundle",
     "clean": "npm-run-all clean:*",
     "clean:react": "rimraf dist",
-    "clean:preact": "rimraf dist preact.js preact.js.map preact.esm.js preact.esm.js.map preact.umd.js preact.umd.js.map",
-    "test": "mocha -r @babel/register __tests__/**/*.spec.js"
+    "clean:preact": "rimraf dist preact.js preact.js.map preact.esm.js preact.esm.js.map preact.umd.js preact.umd.js.map"
   },
   "files": [
     "src",
