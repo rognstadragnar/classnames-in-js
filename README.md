@@ -165,6 +165,14 @@ import styled from 'classnames-in-js/preact'
 
 **Note**: `classnames-in-js/preact` does not currently support automaticly extracting theming from context or the tagged template literal api. This is on the todo list.
 
+## See also
+
+- [emotion](https://emotion.sh/)
+- [styled-components](https://www.styled-components.com/)
+- [css-modules](https://github.com/css-modules/css-modules)
+- [classnamed-components](https://github.com/Hermanya/classnamed-components)
+- [classnames](https://github.com/JedWatson/classnames)
+
 ## License
 
 [MIT](LICENSE).
