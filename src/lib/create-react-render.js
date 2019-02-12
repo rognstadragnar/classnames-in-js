@@ -7,12 +7,6 @@ export default function createRender(tag, styledClassName, isPropValid) {
     const { as: component = tag, ...rest } = props
     let filteredProps
 
-    for (const key in rest) {
-      if (isPropValid(key)) {
-        filteredProps[key] = rest[key]
-      }
-    }
-
     // Check if it's an HTML tag and not a custom element
     if (typeof tag === 'string' && !tag.includes('-')) {
       filteredProps = {}
