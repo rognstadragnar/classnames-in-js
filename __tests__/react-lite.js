@@ -1,4 +1,4 @@
-import { styled, Theme } from '../src/react'
+import { styled } from '../src/react-lite'
 import React from 'react'
 import {
   render,
@@ -7,23 +7,31 @@ import {
   waitForElement
 } from 'react-testing-library'
 import cx from 'classnames'
-// import './setup'
 
 afterEach(cleanup)
 
 describe('React function API', () => {
   it('Should set className', async () => {
-    const Heading = styled('h1', 'heading')
-    const { getByTestId } = render(<Heading data-testid="el" />)
+    const Container = styled('div', 'container')
+    const { getByTestId } = render(
+      <Container data-testid="el">
+        <h1>Hello CodeSandbox</h1>
+        <h2>Start editing to see some magic happen!</h2>
+      </Container>
+    )
 
     const el = await waitForElement(() => getByTestId('el'))
-    expect(el.classList.contains('heading')).toEqual(true)
+
+    expect(el.classList.contains('container')).toEqual(true)
+    expect(el.childElementCount).toEqual(2)
   })
 
   it('Should preppend className', async () => {
     const Heading = styled('h1', 'heading')
     const { getByTestId } = render(
-      <Heading className="some-other" data-testid="el" />
+      <Heading className="some-other" data-testid="el">
+        el
+      </Heading>
     )
 
     const el = await waitForElement(() => getByTestId('el'))
@@ -32,13 +40,17 @@ describe('React function API', () => {
   })
 
   it('Should react to props className', async () => {
-    const Heading = styled('h1', props =>
-      cx('heading', props.small && 'heading--small')
+    const Heading = styled(
+      'h1',
+      props => cx('heading', props.small && 'heading--small'),
+      ['small']
     )
     const { getByTestId } = render(
       <>
-        <Heading data-testid="normal" />
-        <Heading data-testid="small" small />
+        <Heading data-testid="normal">normal</Heading>
+        <Heading data-testid="small" small>
+          small
+        </Heading>
       </>
     )
 
@@ -74,7 +86,7 @@ describe('React function API', () => {
   })
 
   it('Should handle valid and invalid props to HTMLElement', async () => {
-    const Heading = styled('h1', 'heading')
+    const Heading = styled('h1', 'heading', ['test'])
     const invalidElMockFn = jest.fn()
     const validElMockFn = jest.fn()
 

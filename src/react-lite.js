@@ -2,7 +2,7 @@ import React from 'react'
 import { createIsPropBlacklisted } from './lib/index'
 import createRender from './lib/create-react-render'
 
-export default function styled(tag, styledClassName, blacklist = []) {
+export function styled(tag, styledClassName, blacklist = []) {
   const isPropBlacklisted = createIsPropBlacklisted(['blacklist', ...blacklist])
 
   const render = createRender(tag, styledClassName, isPropBlacklisted)
