@@ -4,9 +4,27 @@ node_modules
 .DS_Store
 /dist
 .rpt2_cache
+
+#react-lite
+lite.js
+lite.js.map
+lite.esm.js
+lite.esm.js.map
+lite.umd.js
+lite.umd.js.map
+
+# preact bundle
 preact.js
 preact.js.map
 preact.esm.js
 preact.esm.js.map
 preact.umd.js
 preact.umd.js.map
+
+#preact-lite
+preact-lite.js
+preact-lite.js.map
+preact-lite.esm.js
+preact-lite.esm.js.map
+preact-lite.umd.js
+preact-lite.umd.js.map
