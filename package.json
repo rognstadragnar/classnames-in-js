@@ -1,6 +1,6 @@
 {
   "name": "classnames-in-js",
-  "description": "A library for writing cleaner components with classnames",
+  "description": "A more sane approach to CSS in React (and Preact) apps",
   "author": "Ragnar Rognstad (https://rognstad.me)",
   "repository": "rognstadragnar/classnames-in-js",
   "license": "MIT",
