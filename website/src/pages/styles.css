@@ -1,0 +1,19 @@
+@import 'https://cdn.jsdelivr.net/npm/tailwindcss/dist/tailwind.min.css';
+
+.container {
+  margin: 50px;
+}
+
+.heading {
+  color: #777;
+  font-weight: 300;
+  font-family: system-ui;
+}
+
+.heading--blue {
+  color: #77f;
+}
+
+.react-live .prism-code {
+  padding: 1rem;
+}

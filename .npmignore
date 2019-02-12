@@ -4,6 +4,8 @@ node_modules
 .DS_Store
 !**/dist
 .rpt2_cache
+website
+__tests__
 !preact.js
 !preact.js.map
 !preact.esm.js
