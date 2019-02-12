@@ -16,6 +16,13 @@ Heavily inspired by how [styled-components](https://www.styled-components.com/) 
 npm i classnames-in-js
 ```
 
+| gzip size | module                         | tag-api | safeguards&nbsp;[(?)]() | theme&nbsp;context                    |
+| --------- | ------------------------------ | ------- | ----------------------- | ------------------------------------- |
+| `~3kb`    | `classnames-in-js`             | ✅      | ✅                      | ✅                                    |
+| `~0.5kb`  | `classnames-in-js/lite`        | ❌      | ❌                      | ❌                                    |
+| `~3kb`    | `classnames-in-js/preact`      | ✅      | ✅                      | ❌ _awaiting context api in Preact X_ |
+| `~0.4kb`  | `classnames-in-js/preact-lite` | ❌      | ❌                      | ❌                                    |
+
 #### Basic usage
 
 ```js

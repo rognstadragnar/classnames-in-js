@@ -17,6 +17,9 @@ const isPropValid = memoize(
       prop.charCodeAt(2) < 91) /* Z+1 */
 )
 
+const createIsPropBlacklisted = blacklist =>
+  memoize(prop => blacklist.indexOf(prop) === -1)
+
 function getClassName(props, styledClassName) {
   const className =
     typeof styledClassName === 'function'
@@ -26,4 +29,18 @@ function getClassName(props, styledClassName) {
   return [className, props.className || props.class].filter(Boolean).join(' ')
 }
 
-export { isPropValid, getClassName }
+function cleanClassesTag(arg1, arg2) {
+  const [strings, ...interpolations] = arg1
+  const { props, theme } = arg2
+  let str = strings[0]
+  for (let i = 0; i < interpolations.length; i++) {
+    str +=
+      typeof interpolations[i] === 'function'
+        ? interpolations[i](props, theme)
+        : interpolations[i]
+    str += strings[i + 1]
+  }
+  return str.replace(/\s{1,}/g, ' ').trim()
+}
+
+export { isPropValid, getClassName, cleanClassesTag, createIsPropBlacklisted }
